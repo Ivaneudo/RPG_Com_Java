@@ -1,19 +1,27 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
-        Personagem heroi = new Personagem("Meros", 124, 50, 200, 250, 5, "Mago" );
+        Scanner in = new Scanner(System.in);
+
         Personagem vilao = new Personagem("Romaduke", 500, 150, 200, 550, 10, "Hidra" );
 
-        System.out.println("----------------------Heroi------------------------");
-        System.out.println(heroi.nome);
-        System.out.println(heroi.vida);
-        System.out.println(heroi.classePersonagem);
-        System.out.println(heroi.altura);
-        System.out.println("---------------------Monstro------------------------");
-        System.out.println(vilao.nome);
-        System.out.println(vilao.vida);
-        System.out.println(vilao.classePersonagem);
-        System.out.println(vilao.altura);
+        System.out.println("Olá jogador, bem vindo a Batalha Lendaria. \nPor favor, difite o nome do seu personagem: ");
+        String nome = in.nextLine();
+
+        Personagem heroi = new Personagem(nome, 124, 50, 200, 250, 5, "Mago" );
+
+        System.out.println("------------------Estados do seu personagem--------------------");
+        System.out.println("Nome: "     + heroi.nome);
+        System.out.println("Vida: "     + heroi.vida);
+        System.out.println("Classe: "   + heroi.classePersonagem);
+        System.out.println("Altura: "   + heroi.altura);
+        System.out.println("---------------------Estados do Monstro------------------------");
+        System.out.println("Nome: "     + vilao.nome);
+        System.out.println("Vida: "     + vilao.vida);
+        System.out.println("Classe: "   + vilao.classePersonagem);
+        System.out.println("Altura: "   + vilao.altura);
 
     }
 }
