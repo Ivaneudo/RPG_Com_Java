@@ -21,8 +21,21 @@ public class Personagem {
         this.classePersonagem = classPersonagem;
     }
 
-    public void atacar () {
+    public void atacar (Personagem alvo) {
+        int dano = (alvo.defesa - this.forca) / 2  ;
 
+        if (dano <= 0) {
+            dano = 0;
+        }
+
+        System.out.println(this.nome + " atacou " + alvo.nome + " e deu " + dano + " de dano.");
+        System.out.println(dano);
+
+        if (alvo.vida < 0) {
+            alvo.vida = 0;
+        } else {
+            alvo.vida -= dano;
+        }
     }
 
     public void defender () {

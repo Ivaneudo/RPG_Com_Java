@@ -23,5 +23,11 @@ public class Main {
         System.out.println("Classe: "   + vilao.classePersonagem);
         System.out.println("Altura: "   + vilao.altura);
 
+        heroi.atacar(vilao);
+        vilao.atacar(heroi);
+
+        System.out.println("Vida do " + vilao.nome + " depois do ataque " + vilao.vida);
+        System.out.println("Vida do " + heroi.nome + " depois do ataque " + heroi.vida);
+
     }
 }
